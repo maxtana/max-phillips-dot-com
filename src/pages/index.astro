@@ -1,22 +1,15 @@
 ---
-import '../styles/global.scss'
+import BaseLayout from '../layouts/BaseLayout.astro'
 
 const pageTitle = "Home"
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Max Phillips | {pageTitle}</title>
-  </head>
+<BaseLayout pageTitle = {pageTitle}>
 
-	<a href="/">Home</a>
-    <a href="/about">About</a>
-    <a href="/blog">Blog</a>
+  <h2>Welcome to my page</h2>
+    
+  <p>Tim told me to start a blog. So I’m starting a blog.</p>
 
-    <h1>Welcome to my page</h1>
-
-    <p>Tim told me to start a blog. So I’m starting a blog.</p>
-	
-</html>
+</BaseLayout>
+    
+        

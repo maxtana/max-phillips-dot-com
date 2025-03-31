@@ -1,15 +1,18 @@
 ---
+layout: ../../layouts/MarkdownPostLayout.astro
 title: "Tim, Fifi, and the long, queer road to recovery"
 pubDate: 2025-03-31
-description: "This is the first post of my new Astro blog."
-author: "What do you do with 14 years of sobriety, a failed t-shirt business, and a need to connect with people? Start a blog."
+description: "What do you do with 14 years of sobriety, a failed t-shirt business, and a need to connect with people? Start a blog."
+author: "Max Phillips"
 image:
   url: ""
   alt: ""
 tags: ["recovery", "queer", "sobriety", "LGBTQ"]
 ---
 
-Tim told me to write a blog, post it online, and don’t tell anyone. A secret, yet public, place to share your thoughts. How strange. _How exhilarating_. Yet, for him, it turned into a successful business——several, actually.
+Tim told me to write a blog, post it online, and don’t tell anyone. 
+
+A secret, yet public, place to share your thoughts. _How exhilarating_. How strange. Yet, for him, this strange habit turned into a successful business&mdash;several, actually.
 
 Okay, I have to come clean. Tim didn’t tell _me_ to write a blog, he told several thousand people (maybe more?) in the video I first saw him in. And it wasn’t even his idea. He got it from Seth. But still... it seems like good advice for someone who has always loved to journal.
 
@@ -19,7 +22,7 @@ You see, we have something in common: we’re both sober. And we both got into r
 
 Honestly, back then, going a whole year without drinking seemed impossible. But, the good folks in that first meeting (and each subsequent meeting) kept telling me “Just take it one day at a time,” and they were right.
 
-I used to bristle at sayings like this——such a cliché, _so fucking cheesy_. But, by the time I came to my first AA meeting, it didn’t matter. Nothing mattered, except finding a way to make the pain go away. Drinking wasn’t doing it, in fact drinking was making it all worse. Something needed to change. And, at that point I would do anything, _anything_, to stop.
+I used to bristle at sayings like this&mdash;such a cliché, _so fucking cheesy_. But, by the time I came to my first AA meeting, it didn’t matter. Nothing mattered, except finding a way to make the pain go away. Drinking wasn’t doing it, in fact drinking was making it all worse. Something needed to change. And, at that point I would do anything, _anything_, to stop.
 
 So, that’s what I did. I went to meetings every day. Two and three times some days. And I kept doing that util the thought of having a drink just wasn’t a part of me any more.
 
