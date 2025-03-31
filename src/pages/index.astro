@@ -1,15 +1,19 @@
 ---
-import '../styles/global.scss'
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const pageTitle = "Home"
 ---
 
-<Layout>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Astro</title>
+    <title>{pageTitle}</title>
+  </head>
+
 	<a href="/">Home</a>
     <a href="/about">About</a>
     <a href="/blog">Blog</a>
-	<Welcome />
-</Layout>
+
+    <h1>Welcome to my page</h1>
+	
+</html>
