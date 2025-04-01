@@ -1,17 +1,27 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
-import Greeting from '../components/Greetin'
+import BlogPost from '../components/BlogPost.astro';
+const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager:true}));
 const pageTitle = "Home"
 ---
 
 <BaseLayout pageTitle = {pageTitle}>
 
-  <h2>Welcome to my page</h2>
+  <ul>
+    {allPosts.map((post: any) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
     
-  <p>Tim told me to start a blog. So I’m starting a blog.</p>
-
-  <Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari"]} />
+  </ul>
 
 </BaseLayout>
     
-        
+<style lang="scss">
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+    li {
+      
+    }
+  }
+</style>

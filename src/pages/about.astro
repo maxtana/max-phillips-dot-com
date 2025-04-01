@@ -22,41 +22,7 @@ const textCase = "uppercase";
 
 <BaseLayout pageTitle = {pageTitle}>
 
-        <h2>Quick facts</h2>
-
-        <ul>
-            <li>My name is {identity.firstName}.</li>
-            <li>I live in {identity.country}</li>
-            <li>Two of my hobbies are {identity.hobbies[0]} and {identity.hobbies[1]}.</li>
-        </ul>
-
-        <h2>My Skills</h2>
-        <ul>
-            {skills.map((skill) => <li class="skill">{skill}</li>)}
-        </ul>
-
-        <p>The path that led me to start this blog is a diverse one. I’ve interviewed local artists, musicians and business owners as cohost and producer of the video podcast Creatively Wired. I cofounded the coworking space The Candy Factory in downtown Lancaster. As co-owner of the creative firm Not Bad Design I was part of the team that created complete marketing solutions — including branding ID, websites and promotional videos —  for local nonprofits. I was coproducer for the short documentary “Buy Fresh, Buy Local, By Lancaster.” I have performed in various local, regional and national films, commercials, television shows, and theatrical productions.</p>
-
-        <p>I have served on the boards for the theater troupe Creative Works of Lancaster, Pride Lancaster, and Pride Buffalo. I was a producer and director for the web series “Losing Liam,” and worte, produced, and directed my first short film, <em>I Know Where The Bodies Are</em>. in 2017.</p>
-
-        
-
-        {happy && <p>I am happy to be learning Astro!</p> }
-
-        {finished && <p>I finished this tutorial!</p> }
-
-        {goal === 3 ? <p>My goal is to finish in {goal} days.</p> : <p>My goal is not {goal} days.</p> }
+        <p>The path that led me to start this blog is a diverse one. I’ve interviewed local artists, musicians and business owners as cohost and producer of the video podcast <em>Creatively Wired</em>. I cofounded the coworking space <a href="https://candyissweet.com">The Candy Factory</a> in downtown Lancaster. As co-owner of the creative firm Not Bad Design I was part of the team that created complete marketing solutions—including branding ID, websites and promotional videos—for local nonprofits. I was coproducer for the short documentary <em><a href="https://www.imdb.com/title/tt1841530/">Buy Fresh, Buy Local, By Lancaster</a>.</em> I have performed in various local, regional and national films, commercials, television shows, and theatrical productions. I served on the boards of the theater troupe <a href="https://creativelancaster.org">Creative Works of Lancaster</a>, <a href="https://www.lancasterpride.org">Lancaster Pride</a>, and <a href="https://buffalopride.org">Buffalo Pride</a>. I was a producer and director for the web series “Losing Liam,” and worte, produced, and directed my first short film, <em><a href="https://youtu.be/KIBHw05Ifu4?si=VAabCVGijmP_LPQJ">I Know Where The Bodies Are</a></em>. in 2017.</p>
 
 </BaseLayout>
 
-<style is:global define:vars={{skillColor, fontWeight, textCase}}>
-    h1 {
-        color: purple;
-        font-size: 4rem;
-    }
-    .skill {
-        color: var(--skillColor);
-        font-weight: var(--fontWeight);
-        text-transform: var(--textCase);
-    }
-</style>
