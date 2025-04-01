@@ -12,6 +12,7 @@ const { frontmatter } = Astro.props;
     </div>
     <img src={frontmatter.image.url} width="600" alt={frontmatter.image.alt}>
     <slot />
+    <p><a href="/blog">&slarr; Back to blogs</a></p>
 
 </BaseLayout>
 

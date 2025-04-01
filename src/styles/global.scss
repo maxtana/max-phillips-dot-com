@@ -8,8 +8,14 @@ html.dark {
   color: #fff;
 }
 
-.dark .nav-links a {
-  color: #fff;
+.dark {
+  .nav-links a {
+    color: #fff;
+  }
+  a {
+    color: white;
+    font-weight: bold;
+  }
 }
 
 body {
