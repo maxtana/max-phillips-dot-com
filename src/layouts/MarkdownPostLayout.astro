@@ -16,14 +16,14 @@ const { frontmatter } = Astro.props;
 
 </BaseLayout>
 
-<style>
-    a {
-      color: #00539F;
-    }
-  
+<style lang="scss">
     .tags {
       display: flex;
       flex-wrap: wrap;
+
+        a {
+        color: #00539F;
+      }
     }
   
     .tag {
@@ -34,4 +34,5 @@ const { frontmatter } = Astro.props;
       font-size: 1.15em;
       background-color: #F8FCFD;
     }
+
   </style>

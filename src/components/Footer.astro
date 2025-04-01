@@ -4,16 +4,21 @@ const platform = "github";
 const userName = "Maxtana";
 ---
 
+
+
 <footer>
-    <p>Learn more about my projects on <a href={`https://www.${platform}.com/${userName}`}>{platform}</a>!</p>
-    <Social platform="bsky" username="maxtana" />
-    <Social platform="github" username="maxtana" />
-    <Social platform="youtube" username="maxtana" />
+    <hr>
+    <div class="footer__content">
+        <p>Learn more about my projects on <a href={`https://www.${platform}.com/${userName}`}>{platform}</a>!</p>
+        <Social platform="bsky" username="maxtana" />
+        <Social platform="github" username="maxtana" />
+        <Social platform="youtube" username="maxtana" />
+    </div>
 
 </footer>
 
 <style>
-    footer {
+      .footer__content {
         display: flex;
         align-items: center;
         gap: 1rem;

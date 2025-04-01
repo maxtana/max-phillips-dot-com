@@ -26,6 +26,7 @@ export async function GET(context) {
       description: post.data.description,
       link: `/blog/${post.slug}/`, // Links directly to the post
     })),
-    customData: `<language>en-us</language>`,
+    // customData: `<language>en-us</language>`,
+    customData: `<language>en-us</language><lastBuildDate>${new Date().toUTCString()}</lastBuildDate>`
   });
 }

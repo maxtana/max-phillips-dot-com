@@ -2,13 +2,18 @@
 import BaseLayout from '../layouts/BaseLayout.astro'
 import BlogPost from '../components/BlogPost.astro';
 const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager:true}));
-const pageTitle = "Home"
+const pageTitle = "Max Phillips"
 ---
 
 <BaseLayout pageTitle = {pageTitle}>
 
   <ul>
-    {allPosts.map((post: any) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
+    <!-- sorts posts newest on top -->
+    {allPosts
+      .sort((a: any, b: any) => 
+        new Date(b.frontmatter.pubDate).getTime() - new Date(a.frontmatter.pubDate).getTime()
+      )
+      .map((post: any) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
     
   </ul>
 
@@ -16,12 +21,8 @@ const pageTitle = "Home"
     
 <style lang="scss">
   ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    
-    li {
-      
-    }
+    display: grid;
+    gap: 1em;
+    list-style:decimal-leading-zero;
   }
 </style>
