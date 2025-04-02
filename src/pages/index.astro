@@ -1,19 +1,27 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
-import BlogPost from '../components/BlogPost.astro';
+import { formatDate } from "../scripts/formatDate";
 const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager:true}));
 const pageTitle = "Max Phillips"
 ---
 
 <BaseLayout pageTitle = {pageTitle}>
 
-  <ul>
+  <ul >
     <!-- sorts posts newest on top -->
-    {allPosts
-      .sort((a: any, b: any) => 
-        new Date(b.frontmatter.pubDate).getTime() - new Date(a.frontmatter.pubDate).getTime()
-      )
-      .map((post: any) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
+
+      {allPosts
+        .sort((a: any, b: any) => 
+          new Date(b.frontmatter.pubDate).getTime() - new Date(a.frontmatter.pubDate).getTime()
+        )
+        .map((post: any) => (
+          <li>
+            <div class="date">{formatDate(post.frontmatter.pubDate)}</div>
+            <p><a href={post.url}>{post.frontmatter.title}</a></p>
+            <small>{post.frontmatter.description}</small>
+          </li>
+        ))
+        }
     
   </ul>
 
@@ -21,8 +29,32 @@ const pageTitle = "Max Phillips"
     
 <style lang="scss">
   ul {
+    --dateGap: 3.75rem;
     display: grid;
-    gap: 1em;
-    list-style:decimal-leading-zero;
+    gap: 1.25em;
+    list-style:none;
+    padding-inline-start: var(--dateGap);
+
+    li {
+      position: relative;
+
+      .date {
+        position: absolute;
+        left: calc(var(--dateGap) * -1);
+        font-size: .6em;
+        font-weight:900;
+        text-transform: uppercase;
+        line-height: 1.5rem;
+        letter-spacing: .0001em;
+      }
+    }
+
+    a::before {
+      content: attr(data-content);
+    }
+
+    p {
+        margin: 0;
+    }
   }
 </style>

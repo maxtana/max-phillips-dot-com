@@ -1,10 +1,10 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
+import { formatDate } from "../scripts/formatDate";
 const { frontmatter } = Astro.props;
 ---
 <BaseLayout pageTitle = {frontmatter.title} >
-    <p>Written by {frontmatter.author}</p>
-    <p>Published on {frontmatter.pubDate.toString().slice(0,10)}</p>
+    <p class="date">{formatDate(frontmatter.pubDate)}</p>
     <div class="tags">
         {frontmatter.tags.map((tag: string) => (
             <p class="tag"><a href={`/tags/${tag}`}>{tag}</a></p>
@@ -12,27 +12,40 @@ const { frontmatter } = Astro.props;
     </div>
     <img src={frontmatter.image.url} width="600" alt={frontmatter.image.alt}>
     <slot />
-    <p><a href="/blog">&slarr; Back to blogs</a></p>
+    <p><a href="/">&slarr; Home</a></p>
 
 </BaseLayout>
 
 <style lang="scss">
+
+    .date {
+      // margin-block-start: -1.25rem;
+      font-size: .75em;
+      text-transform: uppercase;
+    }
+
     .tags {
       display: flex;
       flex-wrap: wrap;
-
-        a {
-        color: #00539F;
-      }
     }
   
     .tag {
       margin: 0.25em;
-      border: dotted 1px #a1a1a1;
-      border-radius: .5em;
-      padding: .5em 1em;
-      font-size: 1.15em;
-      background-color: #F8FCFD;
+      border-radius: 1em;
+      padding: .1em 1em;
+      font-size: .75em;
+      background-color: var(--clr-dark);
+
+      a {
+          color: var(--clr-white);
+      }
+
+      &:hover,
+      &:focus-visible {
+        background-color: var(--clr-accent);
+      }
     }
+
+   
 
   </style>
