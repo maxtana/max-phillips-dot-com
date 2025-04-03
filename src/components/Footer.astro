@@ -9,11 +9,11 @@ import { Icon } from 'astro-icon/components'
     <hr>
     <div class="footer__content">
 
-        <ul>
+        <ul aria-label="social media links">
             {socials.map(({ name, url, icon }) => (
               <li>
-                <a href={url} target="_blank" rel="noopener noreferrer">
-                  <Icon name={icon} width="2em" height="2em" alt="" aria-hidden="true" /> 
+                <a href={url} target="_blank" rel="noopener noreferrer" aria-label={`Follow me on ${name}`}>
+                  <Icon name={icon} width="2em" height="2em" aria-hidden="true" /> 
                   {name}
                 </a>
               </li>
