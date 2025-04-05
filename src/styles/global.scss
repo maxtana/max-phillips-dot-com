@@ -1,10 +1,14 @@
 :root {
   --clr-dark: #4c1d95;
   --clr-accent: #ff9776;
-  --clr-link: #00539F;
+  --clr-link-drk: #00539F;
+  --clr-blue-lt: #00bfff;
   --clr-white: #fff;
   --clr-neutral-200: #a1a1a1;
   --clr-neutral-100: #F8FCFD;
+
+  --clr-link: var(--clr-link-drk);
+  --clr-hover: var(--clr-accent);
 }
 
 html {
@@ -33,10 +37,10 @@ h1 {
 a {
   text-decoration: none;
   font-size: bold;
-  color: #ea5122;
+  color: var(--clr-link);
 
   &:hover {
-    color: #0d0950;
+    color: var(--clr-hover);
   }
 }
 
@@ -55,8 +59,8 @@ hr {
 blockquote {
   display: grid;
   gap: 0.5em;
-  border-left: 4px solid #00bfff;
-  background: var(--clr-dark);
+  border-left: 4px solid var(--clr-link);
+  background-color: var(--clr-neutral-100);
   padding: 1em;
   margin: 1em 0;
   border-radius: 0.5em;
@@ -67,67 +71,6 @@ blockquote {
 }
 blockquote strong {
   display: block;
-}
-
-// ============== nav styles ================
-
-hamburger {
-  padding-right: 20px;
-  cursor: pointer;
-}
-
-.hamburger .line {
-  display: block;
-  width: 40px;
-  height: 5px;
-  margin-bottom: 10px;
-  background-color: #ff9776;
-}
-
-.nav-links {
-  width: 100%;
-  top: 5rem;
-  left: 48px;
-  background-color: #ff9776;
-  display: none;
-  margin: 0;
-}
-
-.nav-links a {
-  display: block;
-  text-align: center;
-  padding: 10px 0;
-  text-decoration: none;
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.nav-links a:hover,
-.nav-links a:focus {
-  background-color: #ff9776;
-}
-
-.expanded {
-  display: unset;
-}
-
-@media screen and (min-width: 636px) {
-  .nav-links {
-    margin-left: 5em;
-    display: block;
-    position: static;
-    width: auto;
-    background: none;
-  }
-
-  .nav-links a {
-    display: inline-block;
-    padding: 15px 20px;
-  }
-  .hamburger {
-    display: none;
-  }
 }
 
 // ============== tags & cats ================
@@ -154,25 +97,24 @@ hamburger {
   }
 }
 
-
-
 // ============== dark styles ================
 
 html.dark {
   background-color: #0d0950;
-  color: #fff;
+  color: var(--clr-white);
 }
 
 .dark {
-  .nav-links a {
-    color: #fff;
-  }
   a {
-    color: #fff;
+    --clr-link: var(--clr-white);
     font-weight: bold;
 
     &:hover {
-      color: #b7b5d7;
+      --clr-hover: var(--clr-accent);
     }
+  }
+
+  blockquote {
+    background: var(--clr-dark);
   }
 }

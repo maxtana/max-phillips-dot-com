@@ -1,5 +1,58 @@
+---
+---
 
-<div class="nav-links">
-    <a href="/">Home</a>
-    <a href="/about">About</a>
-</div>
+
+<ul class="nav-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="/about">About</a></li>
+</ul>
+
+<style lang="scss" is:global>
+  
+.nav-links {
+  width: 100%;
+  display: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    list-style: none;
+  }
+
+  a {
+  display: block;
+  text-align: center;
+  padding: 10px 0;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+
+}
+}
+
+
+
+.expanded {
+  display: unset;
+}
+
+@media screen and (min-width: 636px) {
+  .nav-links {
+    display: flex;
+    gap: 2em;
+    width: auto;
+    background: none;
+  }
+
+  .nav-links a {
+    display: inline-block;
+    padding: 1em 0;
+  }
+
+  .hamburger {
+        display: none;
+    }
+}
+
+</style>
