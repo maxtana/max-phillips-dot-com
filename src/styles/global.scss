@@ -112,6 +112,23 @@ hr {
   margin-block-end: 3rem;
 }
 
+blockquote {
+  display: grid;
+  gap: 0.5em;
+  border-left: 4px solid #00bfff;
+  background: var(--clr-dark);
+  padding: 1em;
+  margin: 1em 0;
+  border-radius: 0.5em;
+
+  p {
+    margin: 0;
+  }
+}
+blockquote strong {
+  display: block;
+}
+
 
 // ============== dark styles ================
 
