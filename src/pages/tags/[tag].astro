@@ -23,7 +23,7 @@ const { posts } = Astro.props;
   
       <p>Posts tagged with <span class="title-case">“{tag}”</span></p>
   
-  <ul>
+  <ul class="tag-post-list">
     {posts.map((post: any) => <BlogPost url={post.url} title={post.frontmatter.title}/>)}
   </ul>
 
@@ -35,4 +35,43 @@ const { posts } = Astro.props;
     .title-case {
         text-transform: capitalize;
     }
+
+    ul.tag-post-list {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      gap: .5em;
+
+      li {
+        display: flex;
+        align-items: center;
+        gap: .25em;
+        
+        &::before {
+          --icon-size: 1.5em;
+          --icon-url: url('../../icons/arrow-right.svg');
+
+          display: inline-block;
+          width: var(--icon-size);
+          height: var(--icon-size);
+          background-color: var(--clr-text);
+
+          -webkit-mask-image: var(--icon-url);
+          -webkit-mask-repeat: no-repeat;
+          -webkit-mask-size: contain;
+
+          mask-image: var(--icon-url);
+          mask-repeat: no-repeat;
+          mask-size: contain;
+          content: "";
+
+        }
+      }
+    }
+    
+    .dark {
+      ul.tag-post-list {
+        & li::before {
+      background-color: white;
+    }}}
 </style>
