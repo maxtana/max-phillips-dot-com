@@ -40,6 +40,35 @@ a {
   }
 }
 
+
+hr {
+  opacity: .5;
+  margin-block: 4rem;
+}
+
+
+.footnotes {
+  opacity: .7;
+  margin-block-end: 3rem;
+}
+
+blockquote {
+  display: grid;
+  gap: 0.5em;
+  border-left: 4px solid #00bfff;
+  background: var(--clr-dark);
+  padding: 1em;
+  margin: 1em 0;
+  border-radius: 0.5em;
+
+  p {
+    margin: 0;
+  }
+}
+blockquote strong {
+  display: block;
+}
+
 // ============== nav styles ================
 
 hamburger {
@@ -101,33 +130,30 @@ hamburger {
   }
 }
 
-hr {
-  opacity: .5;
-  margin-block: 4rem;
+// ============== tags & cats ================
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
 }
 
+.tag {
+  margin: 0.25em;
+  border-radius: 1em;
+  padding: .1em 1em;
+  font-size: .75em;
+  background-color: var(--clr-dark);
 
-.footnotes {
-  opacity: .7;
-  margin-block-end: 3rem;
-}
+  a {
+      color: var(--clr-white);
+  }
 
-blockquote {
-  display: grid;
-  gap: 0.5em;
-  border-left: 4px solid #00bfff;
-  background: var(--clr-dark);
-  padding: 1em;
-  margin: 1em 0;
-  border-radius: 0.5em;
-
-  p {
-    margin: 0;
+  &:hover,
+  &:focus-visible {
+    background-color: var(--clr-accent);
   }
 }
-blockquote strong {
-  display: block;
-}
+
 
 
 // ============== dark styles ================
