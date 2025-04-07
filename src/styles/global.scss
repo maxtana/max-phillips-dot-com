@@ -1,13 +1,13 @@
 :root {
-  --clr-dark: #2b303a;
-  --clr-accent: #ea7317;
-  --clr-accent-2: #fec601;
-  --clr-accent-3: #3da5d9;
-  --clr-accent-4: #73bfb8;
-  --clr-white: #fff;
-  --clr-neutral-300: #576175;
-  --clr-neutral-200: #a1a1a1;
-  --clr-neutral-100: #f1f5f9;
+  --clr-dark: hsl(220, 15%, 20%);
+  --clr-accent: hsl(26, 83%, 50%);
+  --clr-accent-2: hsl(47, 99%, 50%);
+  --clr-accent-3: hsl(200, 67%, 55%);
+  --clr-accent-4: hsl(174, 37%, 60%);
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-neutral-300: hsl(220, 15%, 40%);
+  --clr-neutral-200: hsl(0, 0%, 63%);
+  --clr-neutral-100: hsl(210, 40%, 96%);
 
   --clr-link: var(--clr-dark);
   --clr-hover: var(--clr-accent);
@@ -56,10 +56,15 @@ hr {
   margin-block: 4rem;
 }
 
-
 .footnotes {
+  margin-block: 3rem 5rem;
   opacity: .7;
-  margin-block-end: 3rem;
+  font-size: .8rem;
+
+  ol {
+    padding-inline: 2em;
+  }
+ 
 }
 
 blockquote {
@@ -77,6 +82,21 @@ blockquote {
 }
 blockquote strong {
   display: block;
+}
+
+// ============== Utils ================
+@import './breakpoints';
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 // ============== tags & cats ================

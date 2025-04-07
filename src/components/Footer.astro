@@ -1,12 +1,11 @@
 ---
-import { socials } from "../data/socials"
-import { Icon } from 'astro-icon/components'
+import { socials } from "../data/socials";
+import { Icon } from 'astro-icon/components';
 ---
 
 
 
 <footer>
-    <hr>
     <div class="footer__content">
 
         <ul aria-label="social media links">
@@ -24,14 +23,18 @@ import { Icon } from 'astro-icon/components'
 
 </footer>
 
-<style>
+<style lang="scss">
+  @import '../styles/breakpoints.scss';
 
     footer {
-        margin-block-end: 5rem;
+        margin-block: 3rem 5rem;
+        padding-block-start: 2rem;
+        border-block-start: 1px solid var(--clr-neutral-200);
     }
     
     ul{
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
         gap: 2rem;
@@ -39,6 +42,10 @@ import { Icon } from 'astro-icon/components'
         list-style: none;
         padding: 0;
         border: 0;
+
+        @include respond(md) {
+          flex-direction: row;
+        }
     }
 
     li {
