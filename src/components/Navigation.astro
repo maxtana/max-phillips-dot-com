@@ -8,6 +8,7 @@
 </ul>
 
 <style lang="scss" is:global>
+  @import '../styles/breakpoints';
   
 .nav-links {
   width: 100%;
@@ -35,7 +36,7 @@
   display: unset;
 }
 
-@media screen and (min-width: 636px) {
+@include respond(sm) {
   .nav-links {
     display: flex;
     gap: 2em;
