@@ -1,4 +1,25 @@
+@import './breakpoints';
+
+@font-face {
+  font-family: 'Source Code Pro';
+  src: url('/fonts/SourceCodeVF-Upright.otf.woff2') format('woff2-variations');
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Source Code Pro';
+  src: url('/fonts/SourceCodeVF-Italic.otf.woff2') format('woff2-variations');
+  font-weight: 100 1000;
+  font-style: italic;
+  font-display: swap;
+}
+
 :root {
+  font-family: 'Source Code Pro';
+  font-size: 16px;
+
   --clr-dark: hsl(220, 15%, 20%);
   --clr-accent: hsl(26, 83%, 50%);
   --clr-accent-2: hsl(47, 99%, 50%);
@@ -13,13 +34,11 @@
   --clr-hover: var(--clr-accent);
   --clr-surface: var(--clr-dark);
   --clr-text: var(--clr-dark);
-
 }
 
 html {
   background-color: var(--clr-neutral-100);
   color: var(--clr-text);
-  font-family: sans-serif;
 }
 
 body {
@@ -38,11 +57,12 @@ h1 {
   margin: 1rem 0;
   font-size: 2.5rem;
   line-height: 1;
+  font-weight: 900;
 }
 
 a {
   text-decoration: none;
-  font-size: bold;
+  font-weight: 1000;
   color: var(--clr-link);
 
   &:hover {
@@ -59,7 +79,10 @@ hr {
 .footnotes {
   margin-block: 3rem 5rem;
   opacity: .7;
+
+  @include respond(sm) {
   font-size: .8rem;
+  }
 
   ol {
     padding-inline: 2em;
@@ -84,8 +107,6 @@ blockquote strong {
   display: block;
 }
 
-// ============== Utils ================
-@import './breakpoints';
 
 .sr-only {
   position: absolute;
@@ -127,13 +148,12 @@ blockquote strong {
 
 html.dark {
   background-color: var(--clr-surface);
-  color: var(--clr-white);
+  color: var(--clr-accent-4);
 }
 
 .dark {
   a {
-    --clr-link: var(--clr-white);
-    font-weight: bold;
+    --clr-link: var(--clr-accent-4);
 
     &:hover {
       --clr-hover: var(--clr-accent-2);
