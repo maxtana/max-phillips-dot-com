@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro'
-import BlopostgPost from '../../components/BlogPost.astro';
+import BlogPost from '../../components/BlogPost.astro';
 import { getCollection } from 'astro:content';
 
 const posts = (await getCollection('blog')).sort(
@@ -11,17 +11,29 @@ const pageTitle = "The Blog"
 
 <BaseLayout pageTitle = {pageTitle}>
 
+  <!-- <ul>
+    {
+      posts.map((post) => (
+
+      <BlogPost url={`/blog/${post.id}/`} title={post.data.title} />))
+    }
+    
+  </ul> -->
+
   <ul>
     {
       posts.map((post) => (
         <li>
           <a href={`/blog/${post.id}/`}>
-            <img width={720} height={360} src={post.data.heroImage} alt={post.data.heroAlt} />
+            <img width={720} height={360} src={post.data.heroImage} alt="" />
+            <h4 class="title">{post.data.title}</h4>
+            <p class="date">
+              <p>{post.data.pubDate}</p>
+            </p>
           </a>
         </li>
       ))
     }
-    
   </ul>
 
 </BaseLayout>

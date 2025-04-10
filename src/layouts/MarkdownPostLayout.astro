@@ -1,16 +1,20 @@
 ---
+import type { CollectionEntry } from "astro:content";
 import BaseLayout from "./BaseLayout.astro";
 import { formatDate } from "../scripts/formatDate";
-const { frontmatter } = Astro.props;
+
+type Props = CollectionEntry<'blog'>['data'];
+
+const { title, pubDate, heroImage, heroAlt, tags } = Astro.props
 ---
-<BaseLayout pageTitle = {frontmatter.title} >
-    <p class="date">{formatDate(frontmatter.pubDate)}</p>
+<BaseLayout pageTitle = {title} >
+    <p class="date">{pubDate}</p>
     <div class="tags">
-        {frontmatter.tags.map((tag: string) => (
+        {tags.map((tag: string) => (
             <p class="tag"><a href={`/tags/${tag}`}>{tag}</a></p>
         ))}
     </div>
-    <img src={frontmatter.image.url} width="600" alt={frontmatter.image.alt}>
+    <img src={heroImage} width="600" alt={heroAlt}>
     <slot />
     <p><a href="/">&slarr; Home</a></p>
 
