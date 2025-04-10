@@ -1,0 +1,30 @@
+---
+title: Choices, the prisons of our own making
+pubDate: 2025-04-10T11:43:52.187Z
+description: We always have the choice to do something different. Even it that choice is difficult.
+tags:
+    - choices
+    - dreams
+    - consequences
+---
+I had another strange dream last night. I was in some sort of prison, but it was more like a screened-in porch than a cell. I was standing near the edge of the left wall, carving my name in a bottle cap or something like that. I was working on one side (maybe the inside?) and I realized I had gone too deep. So I flipped it over and worked smaller on the other side. 
+
+Then a guard was there. I don't know if he had been there the whole time or if he just appeared. But he told me my time was up——I had to turn the bottle, cap, and carving tool over to him. I asked him something like, "aren't you worried I'll stab you?" He was confident I would not. 
+
+Then I looked around. The place was dismal. A small cot in the back with the thinnest of blankets. And the place really was like a porch——exposed to the outside. I complained that I would freeze and that I was essentially sleeping outside. I don't think there was anyone around to hear me. 
+
+The place was also littered with junk. It was more like an old storage area that was turned into a jail cell. I don't remember specifics but it reminded me of my Dad's workshop. Just an accumulation of years of "stuff." 
+
+I suppose, looking back, I could have easily escaped, I think the outside walls were literally screen material. But, I remember thinking, *I can't escape, they'll catch me and the punishment will be even worse.*
+
+So, this was really a prison of the mind. In truth, I chose to stay, fearing that leaving would be a worse choice.
+
+Funny how, once again, my subconscious is talking to me. 
+
+Yesterday we got the news that our apartment has been sold. Or, rather, there is a deal on the table. A deal contingent on us moving out in 36 days (now 35). We've lived here for nearly two years. The last year not entirely by choice. We have wanted to leave for a very long time. We had even found a great house to move to, but we didn't take since, at the time, it would have meant breaking our lease and paying a penalty. 
+
+Yet, here we are, with only a month's notice, scrambling to find a new place. They have all the power (the owners, the agency, the lawyers) and we have none. It feels like a bit of a prison. One that we actually can choose to leave at any time. We just have to pay for the consequences of our actions.
+
+This is very much how all of life is, isn't it? We say we don't have choices, but the truth is we *always* have a choice. What we really mean is *we don't want to face the consequences of those choices.*
+
+I'm hoping that today, and in the days and weeks ahead of us, we have the courage to make the right choices and not the safe choices. 
